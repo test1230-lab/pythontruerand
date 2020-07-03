@@ -24,12 +24,15 @@ while True:
         # SPACE pressed
         img_name = "opencv_frame.png".format()
         cv2.imwrite(img_name, frame)
-        md5hash = hashlib.md5(Image.open('opencv_frame.png').tobytes())
-        print(md5hash.hexdigest())
-        pogger = (md5hash.hexdigest())
-        random.seed(pogger)
-        print(random.randint(1,1000)) 
+        BLOCKSIZE = 65536
+        hasher = hashlib.sha1()
+        with open('opencv_frame.png' , 'rb') as image:
+            buf = image.read(BLOCKSIZE)
+            while len(buf) > 0:
+                hasher.update(buf)
+                buf = image.read(BLOCKSIZE)
+                print(hasher.hexdigest())
+                
 cam.release()
 
 cv2.destroyAllWindows()
-
