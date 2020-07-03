@@ -1,2 +1,2 @@
 # pythontruerand
-a random number generator that creates a unique hash fromwebcam feed, then uses the hash to seen a random number generator
+a random number generator that creates a unique hash from a webcam feed, then uses the hash to seen a random number generator
