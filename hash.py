@@ -22,16 +22,14 @@ while True:
         break
     elif k%256 == 32:
         # SPACE pressed
-        img_name = "opencv_frame.png".format(img_counter)
+        img_name = "opencv_frame.png".format()
         cv2.imwrite(img_name, frame)
         print("written!".format(img_name))
         md5hash = hashlib.md5(Image.open('opencv_frame.png').tobytes())
         print(md5hash.hexdigest())
         pogger = (md5hash.hexdigest())
         random.seed(pogger)
-        y = input("start range ")
-        x = input("send range ")
-        print("First iteration  - ", random.randint(y, x)) 
+        print(random.randint(1,1000)) 
 cam.release()
 
 cv2.destroyAllWindows()
