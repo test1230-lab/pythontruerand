@@ -3,11 +3,10 @@ import hashlib
 import cv2
 import numpy as np
 import random
+
 cam = cv2.VideoCapture(0)
 
 cv2.namedWindow("test")
-
-img_counter = 0
 
 while True:
     ret, frame = cam.read()
