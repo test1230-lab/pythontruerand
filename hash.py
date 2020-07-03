@@ -24,7 +24,6 @@ while True:
         # SPACE pressed
         img_name = "opencv_frame.png".format()
         cv2.imwrite(img_name, frame)
-        print("written!".format(img_name))
         md5hash = hashlib.md5(Image.open('opencv_frame.png').tobytes())
         print(md5hash.hexdigest())
         pogger = (md5hash.hexdigest())
