@@ -2,6 +2,7 @@ from PIL import Image
 import hashlib
 import cv2
 import numpy as np
+import numpy
 import random
 
 x = input("file name if it is located in the same dir as the py file or the image dir if not ")
@@ -13,4 +14,3 @@ with open((x) , 'rb') as image:
 		hasher.update(buf)
 		buf = image.read(BLOCKSIZE)
 		print(hasher.hexdigest())
-                
