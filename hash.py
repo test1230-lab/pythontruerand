@@ -25,7 +25,7 @@ while True:
         img_name = "opencv_frame.png".format()
         cv2.imwrite(img_name, frame)
         BLOCKSIZE = 65536
-        hasher = hashlib.sha1()
+        hasher = hashlib.sha3_512()
         with open('opencv_frame.png' , 'rb') as image:
             buf = image.read(BLOCKSIZE)
             while len(buf) > 0:
