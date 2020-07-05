@@ -8,6 +8,5 @@ hasher = hashlib.sha3_512()
 with open((x) , 'rb') as image:
 	buf = image.read(BLOCKSIZE)
 	hasher.update(buf)
-	buf = image.read(BLOCKSIZE)
 	n = int(hasher.hexdigest(), base = 16)
 	print (n)
