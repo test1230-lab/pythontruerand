@@ -2,7 +2,7 @@ import hashlib
 import numpy
 import random
 
-x = input("file name if it is located in the same dir as the py file or input the image dir if not ")
+x = input("input the file name if it is located in the same dir as the py file or input the image dir if not ")
 BLOCKSIZE = 65536
 hasher = hashlib.sha3_512()
 with open((x) , 'rb') as image:
