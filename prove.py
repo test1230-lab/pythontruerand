@@ -1,7 +1,4 @@
-from PIL import Image
 import hashlib
-import cv2
-import numpy as np
 import numpy
 import random
 
