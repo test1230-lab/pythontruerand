@@ -10,7 +10,7 @@ BLOCKSIZE = 65536
 hasher = hashlib.sha3_512()
 with open((x) , 'rb') as image:
 	buf = image.read(BLOCKSIZE)
-	while len(buf) > 0:
-		hasher.update(buf)
-		buf = image.read(BLOCKSIZE)
-		print(hasher.hexdigest())
+	hasher.update(buf)
+	buf = image.read(BLOCKSIZE)
+	n = int(hasher.hexdigest(), base = 16)
+	print (n)
