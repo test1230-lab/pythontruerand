@@ -8,6 +8,7 @@ cam = cv2.VideoCapture(0)
 
 cv2.namedWindow("test")
 trim = input("number of digits eg. if you input 5 the value could be 00000 to 99999 ")
+print ("pressing space generates a new random number")
 while True:
     ret, frame = cam.read()
     if not ret:
