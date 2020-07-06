@@ -33,7 +33,7 @@ while True:
                 buf = image.read(BLOCKSIZE)
                 print(hasher.hexdigest()
                 n = int(hasher.hexdigest(), base = 16)
-	            print (n)
+		print (n)
                 
 cam.release()
 
