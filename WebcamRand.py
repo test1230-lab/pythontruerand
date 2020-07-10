@@ -32,7 +32,7 @@ while True:
             while len(buf) > 0:
                 hasher.update(buf)
                 buf = image.read(BLOCKSIZE)
-                print(hasher.hexdigest())
+                #print(hasher.hexdigest())
                 n = int(hasher.hexdigest(), base = 16)
 		numstring = str(n)
 		trunk = (numstring[:(int(trim))])
